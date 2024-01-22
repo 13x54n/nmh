@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 
-export default function Layout() {
+export default function Layout(props) {
   return (
     <div className="relative">
       <Navbar />
-      <Home />
+      {props.children}
     </div>
   );
 }

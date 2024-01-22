@@ -1,10 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import NavigationDetails from "./Navbar/NavigationDetails";
 import OrderTypeSwitch from "./Navbar/OrderTypeSwitch";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (e) => {
+    navigate(e)
+  }
   return (
     <header className="bg-white flex flex-row items-center gap-3 justify-between p-4 px-[2vw] sticky top-0 z-20">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleNavigation('/')}>
         <img className="w-10" src="https://ik.imagekit.io/13x54r/nmh/NMH.png?updatedAt=1705392802106" alt="" loading="lazy"/>
         <button className="font-medium text-sm">Nepali Momo House</button>
       </div>
@@ -25,7 +31,7 @@ export default function Navbar() {
             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
           />
         </svg>
-        <input className="inputContainer text-sm" type="text" placeholder="Momo, chowmein, drinks, etc" />
+        <input className="inputContainer text-sm border-none focus:border-transparent focus:ring-0" type="text" placeholder="Momo, chowmein, drinks, etc" />
       </div>
 
       <button className="flex text-sm bg-black p-2 px-4 items-center text-white rounded-[500px] gap-1">
@@ -46,7 +52,9 @@ export default function Navbar() {
 
         <p>Cart • 0</p>
       </button>
-      <button className="text-sm flex items-center gap-1 background-secondary p-2 px-4 rounded-[500px]">
+      <button 
+      className="text-sm flex items-center gap-1 background-secondary p-2 px-4 rounded-[500px]" 
+      onClick={() => handleNavigation('/auth/login')}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
