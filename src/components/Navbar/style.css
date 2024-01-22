@@ -1,0 +1,15 @@
+.active{
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 500px;
+}
+
+.inputContainer{
+    background: transparent;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.inputContainer:focus{
+    outline: none;
+}

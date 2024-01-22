@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Featured Items",
+        "key": "featuredItems"
+    },
+    {
+        "name": "Momo",
+        "key": "momo"
+    },
+    {
+        "name": "Beverages",
+        "key": "beverages"
+    },
+    {
+        "name": "Appetizer",
+        "key": "appetizer"
+    },
+    {
+        "name": "Soup",
+        "key": "soup"
+    },
+    {
+        "name": "Chicken",
+        "key": "chicken"
+    },
+    {
+        "name": "Veg",
+        "key": "veg"
+    },
+    {
+        "name": "Chowmein",
+        "key": "chowmein"
+    },
+    {
+        "name": "Rice",
+        "key": "rice"
+    }
+]
