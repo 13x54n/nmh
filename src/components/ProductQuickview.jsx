@@ -1,55 +1,41 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from 'react'
 import { Dialog, RadioGroup, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
 
-const product = {
-  name: 'Basic Tee 6-Pack ',
-  price: '$192',
-  rating: 3.9,
-  reviewCount: 117,
-  href: '#',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
-  imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
-  sizes: [
-    { name: 'XXS', inStock: true },
-    { name: 'XS', inStock: true },
-    { name: 'S', inStock: true },
-    { name: 'M', inStock: true },
-    { name: 'L', inStock: true },
-    { name: 'XL', inStock: true },
-    { name: 'XXL', inStock: true },
-    { name: 'XXXL', inStock: false },
-  ],
-}
+// const product = {
+//   name: 'Basic Tee 6-Pack ',
+//   price: '$192',
+//   rating: 3.9,
+//   reviewCount: 117,
+//   href: '#',
+//   imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
+//   imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+//   colors: [
+//     { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+//     { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+//     { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
+//   ],
+//   sizes: [
+//     { name: 'XXS', inStock: true },
+//     { name: 'XS', inStock: true },
+//     { name: 'S', inStock: true },
+//     { name: 'M', inStock: true },
+//     { name: 'L', inStock: true },
+//     { name: 'XL', inStock: true },
+//     { name: 'XXL', inStock: true },
+//     { name: 'XXXL', inStock: false },
+//   ],
+// }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function ProductQuickView({productOverview}) {
-  const [open, setOpen] = useState(productOverview)
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+export default function ProductQuickView({setProductOverview, product}) {
+  const [open, setOpen] = useState(true)
+  const [selectedColor, setSelectedColor] = useState()
+  const [selectedSize, setSelectedSize] = useState()
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -63,7 +49,7 @@ export default function ProductQuickView({productOverview}) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 hidden bg-gray-500 bg-opacity-75 transition-opacity md:block" />
+          <div className="fixed inset-0 hidden bg-gray-700 bg-opacity-65 transition-opacity md:block" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -82,7 +68,10 @@ export default function ProductQuickView({productOverview}) {
                   <button
                     type="button"
                     className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                      setOpen(false)
+                      setProductOverview(false)
+                    }}
                   >
                     <span className="sr-only">Close</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -111,16 +100,16 @@ export default function ProductQuickView({productOverview}) {
                                 <StarIcon
                                   key={rating}
                                   className={classNames(
-                                    product.rating > rating ? 'text-gray-900' : 'text-gray-200',
+                                    product?.rating > rating ? 'text-gray-900' : 'text-gray-200',
                                     'h-5 w-5 flex-shrink-0'
                                   )}
                                   aria-hidden="true"
                                 />
                               ))}
                             </div>
-                            <p className="sr-only">{product.rating} out of 5 stars</p>
+                            <p className="sr-only">{product?.rating} out of 5 stars</p>
                             <a href="#" className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                              {product.reviewCount} reviews
+                              {product?.reviewCount} reviews
                             </a>
                           </div>
                         </div>
@@ -139,7 +128,7 @@ export default function ProductQuickView({productOverview}) {
                             <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
                               <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
                               <span className="flex items-center space-x-3">
-                                {product.colors.map((color) => (
+                                {product?.colors?.map((color) => (
                                   <RadioGroup.Option
                                     key={color.name}
                                     value={color}
@@ -180,7 +169,7 @@ export default function ProductQuickView({productOverview}) {
                             <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                               <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                               <div className="grid grid-cols-4 gap-4">
-                                {product.sizes.map((size) => (
+                                {product?.sizes?.map((size) => (
                                   <RadioGroup.Option
                                     key={size.name}
                                     value={size}

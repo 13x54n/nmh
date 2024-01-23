@@ -1,21 +1,17 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import { useState } from "react";
+import ProductQuickView from "./ProductQuickview";
 
 export default function ProductCard({ product }) {
+  const [productOverview, setProductOverview] = useState(false);
+
+  console.log(product)
+
   return (
-    <div key={product.id} className="group relative cursor-pointer">
+    <div
+      key={product.id}
+      className="group relative cursor-pointer"
+      onClick={() => setProductOverview(true)}
+    >
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-80 lg:h-60">
         <img
           src={product.imageSrc}
@@ -35,6 +31,10 @@ export default function ProductCard({ product }) {
         </div>
         <p className="text-sm font-medium text-gray-900">${product.price}</p>
       </div>
+
+      {productOverview && (
+        <ProductQuickView product={product} setProductOverview={setProductOverview} />
+      )}
     </div>
   );
 }

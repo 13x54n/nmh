@@ -3,7 +3,6 @@ import SidebarItems from "../utils/Sidebar.json";
 import ProductCard from "../components/ProductCard";
 import Foods from "../utils/Foods.json";
 import ProductQuickView from "../components/ProductQuickview";
-import Cart from "../components/Cart";
 
 export default function Home() {
   const handleScroll = (id) => {
@@ -16,12 +15,9 @@ export default function Home() {
     });
   };
 
-  const [cartOpen, setCartOpen] = useState(false);
-  const [productOverview, setProductOverview] = useState(false);
   return (
     <div className="relative">
-      <ProductQuickView productOverview={productOverview} setProductOverview={setProductOverview}/>
-      <Cart cartOpen={cartOpen} setCartOpen={setCartOpen}/>
+      
       <div className="offerBanner">
         <img
           className="h-40 w-[100%] object-cover"
@@ -57,7 +53,7 @@ export default function Home() {
 
                   <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
                     {Foods[item.key].map((product, index) => {
-                      return <ProductCard product={product} />;
+                      return <ProductCard key={index} product={product} />;
                     })}
                   </div>
                 </div>
