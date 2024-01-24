@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Home from "../pages/Home";
 import RegisterUser from "../pages/RegisterUser";
 import RecoveryUser from "../pages/RecoveryUser";
+import Checkout from "../pages/Checkout";
 
 export default function Router() {
     const router = createBrowserRouter([
@@ -36,6 +37,14 @@ export default function Router() {
           element: (
             <Layout>
               <RecoveryUser />
+            </Layout>
+          ),
+        },
+        {
+          path: "/checkout",
+          element: (
+            <Layout>
+              <Checkout />
             </Layout>
           ),
         },

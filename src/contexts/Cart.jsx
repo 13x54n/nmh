@@ -2,7 +2,7 @@
 import { createContext, useReducer } from 'react';
 
 const initialState = {
-  cart: []
+  cart: JSON.parse(localStorage.getItem("nepalimomohouse_cart")) || []
 };
 
 const CartContext = createContext(initialState);
