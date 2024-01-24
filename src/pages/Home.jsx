@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SidebarItems from "../utils/Sidebar.json";
 import ProductCard from "../components/ProductCard";
 import Foods from "../utils/Foods.json";
-import ProductQuickView from "../components/ProductQuickview";
 
 export default function Home() {
   const handleScroll = (id) => {

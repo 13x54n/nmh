@@ -1,26 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import NavigationDetails from "./Navbar/NavigationDetails";
 import OrderTypeSwitch from "./Navbar/OrderTypeSwitch";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Cart from "./Cart";
+import { auth } from "../../firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Navbar() {
   const [user, setUser] = useState();
 
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
+  const handleAuthStateChanged = useCallback((user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
       setUser(user);
-      // ...
     } else {
-      // User is signed out
-      // ...
+      setUser(null);
     }
-  });
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, handleAuthStateChanged);
+
+    return () => {
+      unsubscribe();
+    };
+  }, [handleAuthStateChanged]);
 
   const navigate = useNavigate();
 
@@ -30,9 +34,9 @@ export default function Navbar() {
 
   return (
     <header className="bg-white flex flex-row items-center gap-3 justify-between p-4 px-[2vw] sticky top-0 z-20 border-b-2">
-      {user && (
+      {user?.email && (
         <>
-          <Sidebar user={user} />
+          <Sidebar />
         </>
       )}
       <div
@@ -72,9 +76,7 @@ export default function Navbar() {
       </div>
 
       <Cart />
-      {user?.uid ? (
-        <></>
-      ) : (
+      {!user?.email && (
         <button
           className="text-sm flex items-center gap-1 background-secondary p-2 px-4 rounded-[500px]"
           onClick={() => handleNavigation("/auth/login")}

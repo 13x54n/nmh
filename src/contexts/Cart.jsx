@@ -2,17 +2,17 @@
 import { createContext, useReducer } from 'react';
 
 const initialState = {
-  cart: null
+  cart: []
 };
 
 const CartContext = createContext(initialState);
 
 const reducer = (state, action) => {
   switch(action.type) {
-    case 'SET_CART':
+    case 'ADD_ITEM':
       return { 
         ...state,
-        cart: action.payload
+        cart: [...state.cart, action.payload]
       };
     default:
       return state;

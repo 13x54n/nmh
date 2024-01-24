@@ -2,9 +2,12 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { userSignOut } from "../utils/authentication";
+import { auth } from "../../firebase";
 
-export default function Sidebar({ user }) {
+export default function Sidebar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  var user = auth.currentUser;
+
   return (
     <>
       <button className="mr-3" onClick={() => setSidebarOpen(true)}>

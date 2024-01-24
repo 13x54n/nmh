@@ -1,15 +1,35 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { CartContext } from "../contexts/Cart";
 
 export default function ProductQuickView({ setProductOverview, product }) {
   const [open, setOpen] = useState(true);
-  const [selectedColor, setSelectedColor] = useState();
-  const [selectedSize, setSelectedSize] = useState();
+  const { cartState, dispatchCartState } = useContext(CartContext);
+  const [currentQuantity, setCurrentQuantity] = useState(1);
+
+  const handleProductToCart = () => {
+    var cartData = {
+      product,
+      quantity: currentQuantity,
+      price: currentQuantity * product.price,
+    };
+    const cart = JSON.parse(localStorage.getItem("nepalimomohouse_cart"));
+    cart.push(cartData);
+    localStorage.setItem("nepalimomohouse_cart", JSON.stringify(cart));
+    dispatchCartState({
+      type: "ADD_ITEM",
+      payload: cartData,
+    });
+  };
+
+  const handleItemQuantity = (e) => {
+    if (e === "asc") {
+      setCurrentQuantity((prevQuantity) => prevQuantity + 1);
+    } else if (e === "desc" && currentQuantity > 1) {
+      setCurrentQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -149,16 +169,28 @@ export default function ProductQuickView({ setProductOverview, product }) {
 
                       <div className="flex items-center gap-2 mt-4">
                         <div className="counter">
-                          <button className="bg-gray-200 rounded-lg font-medium text-xl w-12 h-12">
+                          <button
+                            onClick={() => handleItemQuantity("desc")}
+                            className="bg-gray-200 rounded-lg font-medium text-xl w-12 h-12"
+                          >
                             -
                           </button>
-                          <button className="p-2 w-10">1</button>
-                          <button className="bg-gray-200 rounded-lg font-medium text-xl w-12 h-12">
+                          <button className="p-2 w-10">
+                            {currentQuantity}
+                          </button>
+                          <button
+                            onClick={() => handleItemQuantity("asc")}
+                            className="bg-gray-200 rounded-lg font-medium text-xl w-12 h-12"
+                          >
                             +
                           </button>
                         </div>
-                        <button className="bg-black text-white p-3 px-3 rounded-lg">
-                          Add 1 to order • $11.49
+                        <button
+                          onClick={() => handleProductToCart()}
+                          className="bg-black text-white p-3 px-3 rounded-lg"
+                        >
+                          Add {currentQuantity} to order • $
+                          {currentQuantity * product.price}
                         </button>
                       </div>
                     </div>

@@ -7,7 +7,8 @@
       "imageAlt": "",
       "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet",
-      "options": [{ "name": "Veg" }, { "name": "Chicken", "price": 1.00 }]
+      "options": [{ "name": "Veg" }, { "name": "Chicken", "price": 1.00 }],
+      "category": "momo"
     },
     {
       "name": "Jhol Momo",
@@ -15,7 +16,8 @@
       "imageSrc": "https://imgs.search.brave.com/64S_gJB6CMhxT1wiJFlU24J0Ny0lkBCF0MkehydiEBs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jaGFv/c29mZmxhdm9yLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8xMi9maW5hbDIt/NzY4eDEwMjQuanBn",
       "imageAlt": "",
       "hasPreparationOptions": false,
-      "description": "Lorem Ipsum Dolor sit amet"
+      "description": "Lorem Ipsum Dolor sit amet",
+      "category": "momo"
     },
     {
       "name": "Chilli Momo",
@@ -23,7 +25,8 @@
       "imageSrc": "https://imgs.search.brave.com/YCu4VN93m9xYMi0_0eFQwXSgwi7JE0VXvFKcKRdLApU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tb21v/Y3JhdmUuY29tL2lt/YWdlcy9jaGlsbGlt/b21vZ2FsbGVyeS5q/cGc",
       "imageAlt": "",
       "hasPreparationOptions": false,
-      "description": "Lorem Ipsum Dolor sit amet"
+      "description": "Lorem Ipsum Dolor sit amet",
+      "category": "momo"
     },
     {
       "name": "Chowmein",
@@ -31,7 +34,8 @@
       "imageSrc": "https://tb-static.uber.com/prod/image-proc/processed_images/9927d4d6e2abe3471f9112acdc6a57e6/4218ca1d09174218364162cd0b1a8cc1.jpeg",
       "imageAlt": "",
       "hasPreparationOptions": false,
-      "description": "Lorem Ipsum Dolor sit amet"
+      "description": "Lorem Ipsum Dolor sit amet",
+      "category": "chowmein"
     },
     {
       "name": "Kurkurey Momo",
