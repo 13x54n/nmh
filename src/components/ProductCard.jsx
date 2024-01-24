@@ -4,7 +4,7 @@ import ProductQuickView from "./ProductQuickview";
 export default function ProductCard({ product }) {
   const [productOverview, setProductOverview] = useState(false);
 
-  console.log(product)
+  // console.log(product)
 
   return (
     <div
