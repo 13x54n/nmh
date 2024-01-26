@@ -1,0 +1,11 @@
+.navbar__container input {
+  background: transparent;
+}
+.navbar__container input:focus {
+  outline: none;
+}
+@media (max-width: 576px) {
+  .navbar__container .navbar__hide_small {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

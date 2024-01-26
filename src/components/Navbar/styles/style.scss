@@ -1,0 +1,14 @@
+.navbar__container {
+  input {
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .navbar__hide_small{
+    @media (max-width: 576px){
+        display: none;
+    }
+  }
+}

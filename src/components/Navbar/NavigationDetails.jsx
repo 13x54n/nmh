@@ -1,5 +1,6 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import './styles/style.css'
 
 export default function NavigationDetails() {
   const [open, setOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function NavigationDetails() {
     <div>
       <div
         onClick={() => setOpen(true)}
-        className="flex background-secondary p-2 px-3 gap-1 items-center rounded-[500px] cursor-pointer text-sm"
+        className="flex background-secondary p-2 px-3 gap-1 items-center rounded-[500px] cursor-pointer text-sm navbar__hide_small"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

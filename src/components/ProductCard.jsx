@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
         <img
           src={product.imageSrc}
           alt={product.imageAlt}
-          className="h-60 w-full object-cover object-center lg:h-60 lg:w-full"
+          className="h-40 md:h-60 xl:h-60 w-full object-cover object-center lg:h-60 lg:w-full"
         />
       </div>
       <div className="mt-4 flex justify-between">

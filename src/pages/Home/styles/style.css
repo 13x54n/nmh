@@ -1,0 +1,5 @@
+@media (max-width: 576px) {
+  .home__container .home__sidebar {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

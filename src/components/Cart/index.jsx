@@ -1,8 +1,9 @@
 import { Fragment, useContext, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { CartContext } from "../contexts/Cart";
+import { CartContext } from "../../contexts/Cart";
 import { useNavigate } from "react-router-dom";
+import './styles/style.css'
 
 export default function Cart() {
   const [open, setOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Cart() {
           />
         </svg>
 
-        <p>Cart • {cartState.cart.length}</p>
+        <p><span className="navbar__hide_small">Cart</span> • {cartState.cart.length}</p>
       </button>
 
       <Transition.Root show={open} as={Fragment}>
@@ -151,12 +152,15 @@ export default function Cart() {
                           Shipping and taxes calculated at checkout.
                         </p>
                         <div className="mt-6">
-                          <a
-                            onClick={() => navigate("/checkout")}
-                            className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          <div
+                            onClick={() => {
+                              navigate("/checkout")
+                              setOpen(false)
+                            }}
+                            className="cursor-pointer flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                           >
                             Checkout
-                          </a>
+                          </div>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                           <p>

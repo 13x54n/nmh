@@ -14,13 +14,15 @@ export default function ProductQuickView({ setProductOverview, product }) {
       quantity: currentQuantity,
       price: currentQuantity * product.price,
     };
-    const cart = JSON.parse(localStorage.getItem("nepalimomohouse_cart"));
+    const cart = JSON.parse(localStorage.getItem("nepalimomohouse_cart")) || [];
     cart.push(cartData);
     localStorage.setItem("nepalimomohouse_cart", JSON.stringify(cart));
     dispatchCartState({
       type: "ADD_ITEM",
       payload: cartData,
     });
+
+    setOpen(false)
   };
 
   const handleItemQuantity = (e) => {
@@ -33,7 +35,7 @@ export default function ProductQuickView({ setProductOverview, product }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Dialog as="div" className="relative z-20" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

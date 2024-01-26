@@ -1,0 +1,7 @@
+.home__container{
+    @media (max-width: 576px){
+        .home__sidebar{
+            display: none;
+        }
+    }
+}

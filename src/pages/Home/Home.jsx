@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import SidebarItems from "../utils/Sidebar.json";
-import ProductCard from "../components/ProductCard";
-import Foods from "../utils/Foods.json";
+import React from "react";
+import SidebarItems from "../../utils/Sidebar.json";
+import ProductCard from "../../components/ProductCard";
+import Foods from "../../utils/Foods.json";
+import './styles/style.css'
 
 export default function Home() {
   const handleScroll = (id) => {
@@ -15,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative home__container">
       
       <div className="offerBanner">
         <img
@@ -25,7 +26,7 @@ export default function Home() {
           alt=""
         />
         <div className="flex flex-row items-start gap-4 mx-[5vw] my-5 text-md">
-          <div className="sidebar flex flex-col sticky top-20">
+          <div className="sidebar flex flex-col sticky top-20 home__sidebar">
             {SidebarItems.map((item, index) => {
               return (
                 <button
@@ -43,14 +44,14 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 border-b-2 pb-7 mb-4"
+                  className="mx-auto max-w-2xl sm:px-6 lg:max-w-7xl lg:px-8 border-b-2 pb-7 mb-4"
                   id={item.key}
                 >
                   <h2 className="text-xl font-bold tracking-tight text-gray-900">
                     {item.name}
                   </h2>
 
-                  <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                  <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
                     {Foods[item.key].map((product, index) => {
                       return <ProductCard key={index} product={product} />;
                     })}

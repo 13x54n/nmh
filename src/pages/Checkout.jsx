@@ -61,7 +61,7 @@ export default function Checkout() {
         <div className="px-4 pt-8">
           <p className="text-xl font-medium">Order Summary</p>
           <p className="text-gray-400">
-            Check your items. And select a suitable shipping method.
+            Check your items. And select a suitable delivery method.
           </p>
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
@@ -94,7 +94,7 @@ export default function Checkout() {
             </div>
           </div>
 
-          <p className="mt-8 text-lg font-medium">Shipping Methods</p>
+          <p className="mt-8 text-lg font-medium">Delivery Methods</p>
           <form className="mt-5 grid gap-6">
             <div className="relative">
               <input
@@ -111,11 +111,11 @@ export default function Checkout() {
               >
                 <img
                   className="w-14 object-contain"
-                  src="/images/naorrAeygcJzX0SyNI4Y0.png"
+                  src="https://img.freepik.com/free-vector/eating-variety-foods-concept-illustration_114360-10844.jpg?w=740&t=st=1706258867~exp=1706259467~hmac=c7f07d8cd359e24fe60e9190e5a41f419937f4c2597f4ea891debad339fac1f5"
                   alt=""
                 />
                 <div className="ml-5">
-                  <span className="mt-2 font-semibold">Fedex Delivery</span>
+                  <span className="mt-2 font-semibold">Dine In</span>
                   <p className="text-slate-500 text-sm leading-6">
                     Delivery: 2-4 Days
                   </p>
@@ -137,11 +137,11 @@ export default function Checkout() {
               >
                 <img
                   className="w-14 object-contain"
-                  src="/images/oG8xsl3xsOkwkMsrLGKM4.png"
+                  src="https://img.freepik.com/free-vector/3d-delivery-box-parcel_78370-825.jpg?w=740&t=st=1706258668~exp=1706259268~hmac=c4a4ccee37a68febfbdd24c0334f0da3725c49032c8cd703847a8a1815ae93ab"
                   alt=""
                 />
                 <div className="ml-5">
-                  <span className="mt-2 font-semibold">Fedex Delivery</span>
+                  <span className="mt-2 font-semibold">Takeout</span>
                   <p className="text-slate-500 text-sm leading-6">
                     Delivery: 2-4 Days
                   </p>

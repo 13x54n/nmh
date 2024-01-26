@@ -5,6 +5,7 @@ const initialState = {
   cart: JSON.parse(localStorage.getItem("nepalimomohouse_cart")) || []
 };
 
+
 const CartContext = createContext(initialState);
 
 const reducer = (state, action) => {
