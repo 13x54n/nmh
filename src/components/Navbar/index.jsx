@@ -35,6 +35,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white flex flex-row items-center gap-3 justify-between p-4 px-[2vw] sticky top-0 z-20 border-b-2 navbar__container">
+      <div className="flex flex-row items-center gap-2">
       {user?.email && (
         <>
           <Sidebar />
@@ -54,6 +55,7 @@ export default function Navbar() {
         <button className="font-medium text-sm navbar__hide_small">
           Nepali Momo House
         </button>
+      </div>
       </div>
       <OrderTypeSwitch />
       <NavigationDetails />
