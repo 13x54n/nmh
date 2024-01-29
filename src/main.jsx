@@ -1,11 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import Router from './utils/Router'
-import { CartProvider } from './contexts/Cart'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Router from "./utils/Router";
+import { CartProvider } from "./contexts/Cart";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <CartProvider>
-    <Router/>
-  </CartProvider>,
-)
+    {/* <SpeedInsights /> */}
+    <Router />
+  </CartProvider>
+);
