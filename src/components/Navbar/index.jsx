@@ -7,9 +7,11 @@ import { auth } from "../../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useCallback, useEffect, useState } from "react";
 import "./styles/style.css";
+import useWindowDimensions from "../../utils/WindowDimensions";
 
 export default function Navbar() {
   const [user, setUser] = useState();
+  const { width } = useWindowDimensions();
 
   const handleAuthStateChanged = useCallback((user) => {
     if (user) {
@@ -36,26 +38,26 @@ export default function Navbar() {
   return (
     <header className="bg-white flex flex-row items-center gap-3 justify-between p-4 px-[2vw] sticky top-0 z-20 border-b-2 navbar__container">
       <div className="flex flex-row items-center gap-2">
-      {user?.email && (
-        <>
-          <Sidebar />
-        </>
-      )}
+        {user?.email && width > 576 && (
+          <>
+            <Sidebar />
+          </>
+        )}
 
-      <div
-        className="flex items-center gap-2 cursor-pointer"
-        onClick={() => handleNavigation("/")}
-      >
-        <img
-          className="w-10"
-          src="https://ik.imagekit.io/13x54r/nmh/NMH.png?updatedAt=1705392802106"
-          alt=""
-          loading="lazy"
-        />
-        <button className="font-medium text-sm navbar__hide_small">
-          Nepali Momo House
-        </button>
-      </div>
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => handleNavigation("/")}
+        >
+          <img
+            className="w-10"
+            src="https://ik.imagekit.io/13x54r/nmh/NMH.png?updatedAt=1705392802106"
+            alt=""
+            loading="lazy"
+          />
+          <button className="font-medium text-sm navbar__hide_small">
+            Nepali Momo House
+          </button>
+        </div>
       </div>
       <OrderTypeSwitch />
       <NavigationDetails />
@@ -104,6 +106,11 @@ export default function Navbar() {
             </svg>
             <p className="navbar__hide_small">Sign In </p>
           </button>
+        )}
+        {user?.email && width <= 576 && (
+          <>
+            <Sidebar />
+          </>
         )}
       </div>
     </header>
