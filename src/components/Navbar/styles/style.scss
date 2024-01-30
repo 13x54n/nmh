@@ -1,13 +1,20 @@
 .navbar__container {
   input {
     background: transparent;
+    width: 100%;
     &:focus {
       outline: none;
     }
   }
 
+  .active{
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 16px;
+  }
+
   .navbar__hide_small{
-    @media (max-width: 576px){
+    @media (max-width: 768px){
         display: none;
     }
   }

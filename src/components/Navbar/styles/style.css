@@ -1,10 +1,16 @@
 .navbar__container input {
   background: transparent;
+  width: 100%;
 }
 .navbar__container input:focus {
   outline: none;
 }
-@media (max-width: 576px) {
+.navbar__container .active {
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 16px;
+}
+@media (max-width: 768px) {
   .navbar__container .navbar__hide_small {
     display: none;
   }

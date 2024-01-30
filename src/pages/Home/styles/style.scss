@@ -1,7 +1,49 @@
-.home__container{
-    @media (max-width: 576px){
-        .home__sidebar{
-            display: none;
+.home__container {
+  .searchContainer {
+    display: none;
+  }
+  @media (max-width: 576px) {
+    .main {
+      flex-direction: column;
+
+      .sidebar {
+        flex-direction: row;
+        width: 100%;
+        position: static;
+        overflow-x: scroll;
+        gap: 10px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+          display: none;
         }
+
+        button {
+          width: auto;
+          padding: 5px 10px;
+          border-radius: 10px;
+          background: #eeeeee;
+          font-size: 14px;
+
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+
+      .searchContainer {
+        display: flex;
+        margin: 0;
+        gap: 0;
+        margin-bottom: 10px;
+
+        input{
+            background: transparent;
+            width: 100%;
+            font-size: 16px;
+        }
+      }
     }
+  }
 }

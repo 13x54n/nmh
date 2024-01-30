@@ -100,7 +100,7 @@ export default function ProductQuickView({ setProductOverview, product }) {
 
                         <p className="text-sm mt-2">{product.description}</p>
 
-                        <span className="flex flex-row items-center justify-center gap-1 my-4 w-[6vw] py-1 rounded-lg text-sm bg-[#eeeeee]">
+                        <span className="flex flex-row items-center justify-left gap-1 my-4 py-1 rounded-lg text-sm">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"

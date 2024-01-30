@@ -11,7 +11,7 @@ export default function NavigationDetails() {
     <div>
       <div
         onClick={() => setOpen(true)}
-        className="flex background-secondary p-2 px-3 gap-1 items-center rounded-[500px] cursor-pointer text-sm navbar__hide_small"
+        className="flex background-secondary p-2 px-3 gap-1 items-center font-medium text-gray-700 rounded-[500px] cursor-pointer text-sm navbar__hide_small"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -36,7 +36,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-white flex flex-row items-center gap-3 justify-between p-4 px-[2vw] sticky top-0 z-20 border-b-2 navbar__container">
+    <header className="bg-white flex flex-row items-center gap-3 justify-between p-3 px-[2vw] sticky top-0 z-20 border-b-2 navbar__container">
       <div className="flex flex-row items-center gap-2">
         {user?.email && width > 576 && (
           <>
@@ -61,7 +61,7 @@ export default function Navbar() {
       </div>
       <OrderTypeSwitch />
       <NavigationDetails />
-      <div className="searchContainer flex-1 flex items-center gap-1 background-secondary p-3 px-4 rounded-[500px] mx-4 navbar__hide_small">
+      <div className="searchContainer flex-1 flex items-center gap-1 background-secondary p-2 px-4 rounded-[500px] mx-4 navbar__hide_small">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -77,7 +77,7 @@ export default function Navbar() {
           />
         </svg>
         <input
-          className="inputContainer text-sm border-none focus:border-transparent focus:ring-0"
+          className="font-medium inputContainer text-sm border-none focus:border-transparent focus:ring-0"
           type="text"
           placeholder="Momo, chowmein, drinks, etc"
         />
