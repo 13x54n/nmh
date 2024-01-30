@@ -3,6 +3,7 @@ import React from "react";
 // import { googleSignIn, userSignIn } from "../utils/authentication";
 import { useNavigate } from "react-router-dom";
 import { sendUserPasswordResetEmail } from "../utils/authentication";
+import { toast } from "react-toastify";
 
 export default function RecoveryUser() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function RecoveryUser() {
     setLoading(true);
     await sendUserPasswordResetEmail(email);
     setLoading(false);
+    setEmail("")
   };
 
   return (

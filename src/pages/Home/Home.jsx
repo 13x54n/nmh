@@ -72,7 +72,7 @@ export default function Home() {
                   {item.name}
                 </h2>
 
-                <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
                   {Foods[item.key].map((product, index) => {
                     return <ProductCard key={index} product={product} />;
                   })}

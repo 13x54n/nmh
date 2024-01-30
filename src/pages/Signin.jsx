@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { googleSignIn, userSignIn } from "../utils/authentication";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export default function UserAuthentication() {
   const navigate = useNavigate();
@@ -9,13 +10,7 @@ export default function UserAuthentication() {
   const auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
       navigate("/");
-      // ...
-    } else {
-      // User is signed out
-      // ...
     }
   });
 
@@ -28,7 +23,6 @@ export default function UserAuthentication() {
     setLoading(true);
     try {
       const user = await userSignIn(email, password);
-      console.log(user);
       setLoading(false);
     } catch (error) {
       console.log(error);

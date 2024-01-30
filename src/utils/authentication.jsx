@@ -25,7 +25,7 @@ export const userSignIn = (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user
-      console.log(user)
+      toast("User Logged In!")
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -61,7 +61,8 @@ export const googleSignIn = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
-      console.log(user);
+      // console.log(user);
+      toast("User Logged In!")
     })
     .catch((error) => {
       // Handle Errors here.
@@ -91,7 +92,7 @@ export const userSignUp = (email, password) => {
       sendEmailVerification(user).then(() => {
         // Email verification sent!
         // ...
-        console.log("Email verification sent!");
+        toast("Email verification sent!");
       });
     })
     .catch((error) => {

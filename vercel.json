@@ -1,0 +1,28 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      },
+      {
+        "source": "/auth/login",
+        "destination": "/auth/login"
+      },
+      {
+        "source": "/auth/register",
+        "destination": "/auth/register"
+      },
+      {
+        "source": "/auth/recovery",
+        "destination": "/user/recovery"
+      },
+      {
+        "source": "/checkout",
+        "destination": "/send-money"
+      }
+    ]
+  }
