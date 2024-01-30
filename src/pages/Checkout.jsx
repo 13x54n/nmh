@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../contexts/Cart";
 
 export default function Checkout() {
+  const { cartState, dispatchCartState } = useContext(CartContext);
+  console.log(cartState);
   return (
     <div>
       <div className="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
@@ -18,11 +21,11 @@ export default function Checkout() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    stroke-width="2"
+                    strokeWidth="2"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
@@ -35,11 +38,11 @@ export default function Checkout() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M9 5l7 7-7 7"
                 />
               </svg>
@@ -52,7 +55,6 @@ export default function Checkout() {
                 </a>
                 <span className="font-semibold text-gray-900">Checkout</span>
               </li>
-             
             </ul>
           </div>
         </div>
@@ -64,34 +66,26 @@ export default function Checkout() {
             Check your items. And select a suitable delivery method.
           </p>
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
-            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <img
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt=""
-              />
-              <div className="flex w-full flex-col px-4 py-4">
-                <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="text-lg font-bold">$138.99</p>
+            {cartState.cart.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col rounded-lg bg-white sm:flex-row"
+              >
+                <img
+                  className="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                  src={item.product.imageSrc}
+                  alt=""
+                />
+                <div className="flex w-full flex-col px-4 py-4">
+                  <span className="font-semibold">{item.product.name}</span>
+                  <span className="float-right text-gray-400">
+                    42EU - 8.5US
+                  </span>
+                  <p className="text-lg font-bold">$138.99</p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-              <img
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt=""
-              />
-              <div className="flex w-full flex-col px-4 py-4">
-                <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="mt-auto text-lg font-bold">$238.99</p>
-              </div>
-            </div>
+            ))}
+            
           </div>
 
           <p className="mt-8 text-lg font-medium">Delivery Methods</p>
@@ -102,12 +96,13 @@ export default function Checkout() {
                 id="radio_1"
                 type="radio"
                 name="radio"
+                onChange={() => {}}
                 checked
               />
               <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label
                 className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-                for="radio_1"
+                htmlFor="radio_1"
               >
                 <img
                   className="w-14 object-contain"
@@ -117,7 +112,7 @@ export default function Checkout() {
                 <div className="ml-5">
                   <span className="mt-2 font-semibold">Dine In</span>
                   <p className="text-slate-500 text-sm leading-6">
-                    Delivery: 2-4 Days
+                    Prepare Time: 25 Min (From Kitchen)
                   </p>
                 </div>
               </label>
@@ -128,12 +123,13 @@ export default function Checkout() {
                 id="radio_2"
                 type="radio"
                 name="radio"
+                onChange={() => {}}
                 checked
               />
               <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label
                 className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-                for="radio_2"
+                htmlFor="radio_2"
               >
                 <img
                   className="w-14 object-contain"
@@ -143,7 +139,7 @@ export default function Checkout() {
                 <div className="ml-5">
                   <span className="mt-2 font-semibold">Takeout</span>
                   <p className="text-slate-500 text-sm leading-6">
-                    Delivery: 2-4 Days
+                    Prepare Time: 20 Min (Normal)
                   </p>
                 </div>
               </label>
@@ -156,7 +152,10 @@ export default function Checkout() {
             Complete your order by providing your required details.
           </p>
           <div className="">
-            <label for="email" className="mt-4 mb-2 block text-sm font-medium">
+            <label
+              htmlFor="email"
+              className="mt-4 mb-2 block text-sm font-medium"
+            >
               Username
             </label>
             <div className="relative">
@@ -174,18 +173,18 @@ export default function Checkout() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                   />
                 </svg>
               </div>
             </div>
             <label
-              for="card-holder"
+              htmlFor="card-holder"
               className="mt-4 mb-2 block text-sm font-medium"
             >
               Card Holder
@@ -205,18 +204,18 @@ export default function Checkout() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
                   />
                 </svg>
               </div>
             </div>
             <label
-              for="card-no"
+              htmlFor="card-no"
               className="mt-4 mb-2 block text-sm font-medium"
             >
               Card Details
@@ -258,7 +257,7 @@ export default function Checkout() {
               />
             </div>
             <label
-              for="billing-address"
+              htmlFor="billing-address"
               className="mt-4 mb-2 block text-sm font-medium"
             >
               Billing Address
