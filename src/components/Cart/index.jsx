@@ -9,15 +9,6 @@ export default function Cart() {
   const [open, setOpen] = useState(false);
   const { cartState, dispatchCartState } = useContext(CartContext);
   const navigate = useNavigate();
-  const [subtotal, setSubtotal] = useState();
-
-  useEffect(() => {
-    var total = 0;
-    cartState.cart.map((item) => {
-      total += item.price;
-    });
-    setSubtotal(total.toFixed(2));
-  }, [cartState.cart]);
 
   const handleCart = (e, p) => {
     dispatchCartState({ type: e, payload: p });
@@ -130,13 +121,29 @@ export default function Cart() {
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
                                       <div className="flex items-center">
-                                        <button className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white">
+                                        <button
+                                          onClick={() =>
+                                            handleCart(
+                                              "DECREASE_ITEM_QUANTITY",
+                                              product
+                                            )
+                                          }
+                                          className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white"
+                                        >
                                           -
                                         </button>
                                         <div className="mx-3">
                                           {product.quantity}
                                         </div>
-                                        <button className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white">
+                                        <button
+                                          onClick={() =>
+                                            handleCart(
+                                              "INCREASE_ITEM_QUANTITY",
+                                              product
+                                            )
+                                          }
+                                          className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white"
+                                        >
                                           +
                                         </button>
                                       </div>
@@ -164,7 +171,7 @@ export default function Cart() {
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <p>Subtotal</p>
-                          <p>${subtotal}</p>
+                          <p>${cartState.subtotal.toFixed(2)}</p>
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500">
                           Shipping and taxes calculated at checkout.

@@ -151,21 +151,21 @@ export default function Checkout() {
           </form>
         </div>
         <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-          <p className="text-xl font-medium">Payment Details</p>
+          <p className="text-xl font-medium">Pickup Details</p>
           <p className="text-gray-400">
-            Complete your order by providing your payment details.
+            Complete your order by providing your required details.
           </p>
           <div className="">
             <label for="email" className="mt-4 mb-2 block text-sm font-medium">
-              Email
+              Username
             </label>
             <div className="relative">
               <input
                 type="text"
                 id="email"
-                name="email"
+                name="fullname"
                 className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="your.email@gmail.com"
+                placeholder="iLoveMomos"
               />
               <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                 <svg
@@ -302,7 +302,7 @@ export default function Checkout() {
                 <p className="font-semibold text-gray-900">$399.00</p>
               </div>
               <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900">Shipping</p>
+                <p className="text-sm font-medium text-gray-900">HST FD</p>
                 <p className="font-semibold text-gray-900">$8.00</p>
               </div>
             </div>

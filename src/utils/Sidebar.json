@@ -1,38 +1,38 @@
 [
     {
-        "name": "Featured Items",
+        "name": "🔥 Featured Items",
         "key": "featuredItems"
     },
     {
-        "name": "Momo",
+        "name": "🥟 Momo",
         "key": "momo"
     },
     {
-        "name": "Beverages",
+        "name": "🍹 Beverages",
         "key": "beverages"
     },
     {
-        "name": "Appetizer",
+        "name": "🍗 Appetizer",
         "key": "appetizer"
     },
     {
-        "name": "Soup",
+        "name": "🍲 Soup",
         "key": "soup"
     },
     {
-        "name": "Chicken",
+        "name": "🐔 Chicken",
         "key": "chicken"
     },
     {
-        "name": "Veg",
+        "name": "🥕 Veg",
         "key": "veg"
     },
     {
-        "name": "Chowmein",
+        "name": "🍜 Chowmein",
         "key": "chowmein"
     },
     {
-        "name": "Rice",
+        "name": "🍚 Rice",
         "key": "rice"
     }
 ]
