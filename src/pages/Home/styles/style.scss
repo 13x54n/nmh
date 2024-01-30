@@ -1,6 +1,19 @@
 .home__container {
+  position: relative;
   .searchContainer {
     display: none;
+  }
+
+  .goToTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    -webkit-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.27); 
+box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.27);
   }
   @media (max-width: 576px) {
     .main {

@@ -3,11 +3,11 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { CartContext } from "../../contexts/Cart";
 import { useNavigate } from "react-router-dom";
-import './styles/style.css'
+import "./styles/style.css";
 
 export default function Cart() {
   const [open, setOpen] = useState(false);
-  const { cartState } = useContext(CartContext);
+  const { cartState, dispatchCartState } = useContext(CartContext);
   const navigate = useNavigate();
   const [subtotal, setSubtotal] = useState();
 
@@ -18,6 +18,10 @@ export default function Cart() {
     });
     setSubtotal(total.toFixed(2));
   }, [cartState.cart]);
+
+  const handleCart = (e, p) => {
+    dispatchCartState({ type: e, payload: p });
+  };
   return (
     <>
       <button
@@ -39,7 +43,10 @@ export default function Cart() {
           />
         </svg>
 
-        <p><span className="navbar__hide_small">Cart</span> • {cartState.cart.length}</p>
+        <p>
+          <span className="navbar__hide_small">Cart</span> •{" "}
+          {cartState.cart.length}
+        </p>
       </button>
 
       <Transition.Root show={open} as={Fragment}>
@@ -78,7 +85,7 @@ export default function Cart() {
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
+                              className="relative -m-2 p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-0"
                               onClick={() => setOpen(false)}
                             >
                               <span className="absolute -inset-0.5" />
@@ -122,14 +129,25 @@ export default function Cart() {
                                       </p>
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
-                                      <p className="text-gray-500">
-                                        Qty {product.quantity}
-                                      </p>
+                                      <div className="flex items-center">
+                                        <button className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white">
+                                          -
+                                        </button>
+                                        <div className="mx-3">
+                                          {product.quantity}
+                                        </div>
+                                        <button className="py-0.5 w-6 text-lg flex items-center justify-center bg-black text-white">
+                                          +
+                                        </button>
+                                      </div>
 
                                       <div className="flex">
                                         <button
+                                          onClick={() =>
+                                            handleCart("REMOVE_ITEM", product)
+                                          }
                                           type="button"
-                                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                                          className="font-medium text-[#eb4d4b] hover:text-[#ff7979]"
                                         >
                                           Remove
                                         </button>
@@ -154,10 +172,10 @@ export default function Cart() {
                         <div className="mt-6">
                           <div
                             onClick={() => {
-                              navigate("/checkout")
-                              setOpen(false)
+                              navigate("/checkout");
+                              setOpen(false);
                             }}
-                            className="cursor-pointer flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                            className="cursor-pointer flex items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-black"
                           >
                             Checkout
                           </div>
@@ -167,7 +185,7 @@ export default function Cart() {
                             or{" "}
                             <button
                               type="button"
-                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                              className="font-medium text-black hover:text-gray-500"
                               onClick={() => setOpen(false)}
                             >
                               Continue Shopping

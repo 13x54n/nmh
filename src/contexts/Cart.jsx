@@ -15,6 +15,14 @@ const reducer = (state, action) => {
         ...state,
         cart: [...state.cart, action.payload]
       };
+    case 'REMOVE_ITEM':
+      var _tempCart = state.cart;
+      _tempCart.splice(_tempCart.indexOf(action.payload), 1)
+      localStorage.setItem('nepalimomohouse_cart', JSON.stringify(_tempCart))
+      return {
+        ...state,
+        cart: _tempCart
+      }
     default:
       return state;
   }
