@@ -5,6 +5,7 @@ import Router from "./utils/Router";
 import { CartProvider } from "./contexts/Cart";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from '@vercel/analytics/react';
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -25,5 +26,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Router />
     </CartProvider>
     <ToastContainer />
+    <Analytics />
   </>
 );
