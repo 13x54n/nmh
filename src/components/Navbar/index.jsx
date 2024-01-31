@@ -13,8 +13,33 @@ export default function Navbar() {
   const [user, setUser] = useState();
   const { width } = useWindowDimensions();
 
-  const handleAuthStateChanged = useCallback((user) => {
+  const handleAuthStateChanged = useCallback(async (user) => {
     if (user) {
+      try {
+        const response = await fetch(
+          "http://localhost:3000/api/v1/user/authcheck",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: user.email }),
+          }
+        );
+
+        if (response.ok) {
+          // Handle success
+          const responseData = await response.json();
+          console.log(responseData);
+        } else {
+          // Handle error
+          const errorData = await response.json();
+          console.log("Error:", errorData.error);
+        }
+      } catch (error) {
+        console.log("Error:", error.message);
+      }
+
       setUser(user);
     } else {
       setUser(null);

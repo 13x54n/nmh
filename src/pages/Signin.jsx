@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { googleSignIn, userSignIn } from "../utils/authentication";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { toast } from "react-toastify";
 
 export default function UserAuthentication() {
   const navigate = useNavigate();

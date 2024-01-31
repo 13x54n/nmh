@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SidebarItems from "../../utils/Sidebar.json";
 import ProductCard from "../../components/ProductCard";
 import Foods from "../../utils/Foods.json";
