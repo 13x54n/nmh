@@ -17,7 +17,7 @@ export default function Navbar() {
     if (user) {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/v1/user/authcheck",
+          `${import.meta.env.VITE_APP_SERVER_URI}/user/authcheck`,
           {
             method: "POST",
             headers: {
