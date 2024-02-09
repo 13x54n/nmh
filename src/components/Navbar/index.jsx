@@ -110,7 +110,7 @@ export default function Navbar() {
 
       <div className="flex flex-row items-center gap-3">
         <Cart />
-        {!user?.email && (
+        {!user && (
           <button
             className="text-sm flex items-center gap-1 background-secondary p-2 px-4 rounded-[500px]"
             onClick={() => handleNavigation("/auth/login")}

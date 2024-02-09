@@ -32,3 +32,9 @@
 * {
   scroll-margin-top: 90px;
 }
+
+button:focus{
+  outline: none;
+  border: none;
+  border-color: transparent;
+}

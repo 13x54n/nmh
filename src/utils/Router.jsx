@@ -6,6 +6,7 @@ import RegisterUser from "../pages/RegisterUser";
 import RecoveryUser from "../pages/RecoveryUser";
 import Checkout from "../pages/Checkout";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import Activities from "../pages/Activities";
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -46,6 +47,14 @@ export default function Router() {
       element: (
         <Layout>
           <Checkout />
+        </Layout>
+      ),
+    },
+    {
+      path: "/activities",
+      element: (
+        <Layout>
+          <Activities />
         </Layout>
       ),
     },
