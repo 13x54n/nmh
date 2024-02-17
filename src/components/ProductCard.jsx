@@ -4,8 +4,6 @@ import ProductQuickView from "./ProductQuickview";
 export default function ProductCard({ product }) {
   const [productOverview, setProductOverview] = useState(false);
 
-  console.log(product)
-
   return (
     <div
       key={product.id}
@@ -34,7 +32,10 @@ export default function ProductCard({ product }) {
       </div>
 
       {productOverview && (
-        <ProductQuickView product={product} setProductOverview={setProductOverview} />
+        <ProductQuickView
+          product={product}
+          setProductOverview={setProductOverview}
+        />
       )}
     </div>
   );

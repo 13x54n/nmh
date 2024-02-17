@@ -13,7 +13,6 @@ export default function FilteredProducts() {
   const fuse = new Fuse(Products, fuseOptions);
 
   const result = fuse.search(filterInput);
-  console.log(result);
 
   return (
     <div>
