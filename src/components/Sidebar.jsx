@@ -132,14 +132,15 @@ export default function Sidebar() {
                       </div>
 
                       <div>
-                        <div className="socials">
+                        {/* <div className="socials">
                           twitter
                           insta 
                           facebook
-                        </div>
+                        </div> */}
                         <div>
-                          <button>Terms & Conditions</button>
-                          <button>Privacy Policy</button>
+                          {/* <button>Terms & Conditions</button>
+                          <button>Privacy Policy</button> */}
+                          Cipyright &copy; Nepali Momo House. All Rights Reserved.
                         </div>
                       </div>
                     </div>
