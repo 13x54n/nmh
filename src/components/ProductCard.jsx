@@ -17,15 +17,16 @@ export default function ProductCard({ product }) {
           src={product.imageSrc}
           alt={product.imageAlt}
           className="h-40 md:h-60 xl:h-60 w-full object-cover object-center lg:h-60 lg:w-full"
+          loading="lazy"
         />
       </div>
       <div className="mt-4 flex justify-between">
         <div>
           <h3 className="text-sm text-gray-700">
-            <a href={product.href}>
+            <button>
               <span aria-hidden="true" className="absolute inset-0" />
               {product.name}
-            </a>
+            </button>
           </h3>
           <p className="mt-1 text-sm text-gray-500">{product.color}</p>
         </div>

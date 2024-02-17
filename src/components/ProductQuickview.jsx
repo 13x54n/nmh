@@ -79,6 +79,7 @@ export default function ProductQuickView({ setProductOverview, product }) {
                         src={product.imageSrc}
                         alt={product.imageAlt}
                         className="object-cover object-center"
+                        loading="lazy"
                       />
                     </div>
                     <div className="sm:col-span-8 lg:col-span-7">

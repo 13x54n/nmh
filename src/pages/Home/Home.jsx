@@ -28,9 +28,9 @@ export default function Home() {
       <div className="offerBanner">
         <img
           className="h-40 w-[100%] object-cover"
-          src="https://images.unsplash.com/photo-1652862730506-9f7310faabbd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1652862730506-9f7310faabbd?q=80&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           loading="lazy"
-          alt=""
+          alt="Nepali Momo House"
         />
       </div>
       <div className="flex flex-row items-start gap-4 mx-[5vw] my-5 text-md main">

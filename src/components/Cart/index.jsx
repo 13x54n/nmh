@@ -102,6 +102,7 @@ export default function Cart() {
                                       src={product.product.imageSrc}
                                       alt={product.product.imageAlt}
                                       className="h-full w-full object-cover object-center"
+                                      loading="lazy"
                                     />
                                   </div>
 
