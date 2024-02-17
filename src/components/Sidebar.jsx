@@ -3,10 +3,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { userSignOut } from "../utils/authentication";
 import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   var user = auth.currentUser;
+  const navigate = useNavigate();
 
   return (
     <>
@@ -99,7 +101,14 @@ export default function Sidebar() {
                           />
                         </svg>
 
-                        <button>Activity</button>
+                        <button
+                          onClick={() => {
+                            setSidebarOpen(false);
+                            navigate("/activities");
+                          }}
+                        >
+                          Activity
+                        </button>
                       </div>
                       <div className="relative flex-1">
                         <button
@@ -120,6 +129,18 @@ export default function Sidebar() {
                           </svg>
                           Sign Out
                         </button>
+                      </div>
+
+                      <div>
+                        <div className="socials">
+                          twitter
+                          insta 
+                          facebook
+                        </div>
+                        <div>
+                          <button>Terms & Conditions</button>
+                          <button>Privacy Policy</button>
+                        </div>
                       </div>
                     </div>
                   </Dialog.Panel>

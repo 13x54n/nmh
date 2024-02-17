@@ -5,13 +5,15 @@ import Sidebar from "../Sidebar";
 import Cart from "../Cart";
 import { auth } from "../../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import "./styles/style.css";
 import useWindowDimensions from "../../utils/WindowDimensions";
+import { FilterContext } from "../../contexts/Filter";
 
 export default function Navbar() {
   const [user, setUser] = useState();
   const { width } = useWindowDimensions();
+  const { filterInput, setFilterInput } = useContext(FilterContext);
 
   const handleAuthStateChanged = useCallback(async (user) => {
     if (user) {
@@ -30,7 +32,6 @@ export default function Navbar() {
         if (response.ok) {
           // Handle success
           const responseData = await response.json();
-          console.log(responseData);
         } else {
           // Handle error
           const errorData = await response.json();
@@ -102,6 +103,8 @@ export default function Navbar() {
           />
         </svg>
         <input
+        value={filterInput}
+        onChange={(e) => setFilterInput(e.target.value)}
           className="font-medium inputContainer text-sm border-none focus:border-transparent focus:ring-0"
           type="text"
           placeholder="Momo, chowmein, drinks, etc"

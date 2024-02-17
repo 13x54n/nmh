@@ -5,9 +5,8 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/ENptIzGm9rMIebPIIUkETFYxHIlzFJovxkDGo0pz_xM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlc3BydWNlZWF0/cy5jb20vdGhtYi9s/c2lqRVIwb1RwRzAw/S2FxRFFNSU9PYUM5/MzA9LzE1MDB4MC9m/aWx0ZXJzOm5vX3Vw/c2NhbGUoKTptYXhf/Ynl0ZXMoMTUwMDAw/KTpzdHJpcF9pY2Mo/KS9JTUdfODU2Ni1j/YmFjMmMwMDFkNWQ0/YjljOTIzNTg5ZmMx/OGQ5YzEwOC5qcGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet",
-      "options": [{ "name": "Veg" }, { "name": "Chicken", "price": 1.00 }],
+      "options": [{ "name": "Veg" }, { "name": "Chicken", "price": 1.0 }],
       "category": "momo"
     },
     {
@@ -15,7 +14,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/64S_gJB6CMhxT1wiJFlU24J0Ny0lkBCF0MkehydiEBs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jaGFv/c29mZmxhdm9yLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8xMi9maW5hbDIt/NzY4eDEwMjQuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet",
       "category": "momo"
     },
@@ -24,7 +22,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/YCu4VN93m9xYMi0_0eFQwXSgwi7JE0VXvFKcKRdLApU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tb21v/Y3JhdmUuY29tL2lt/YWdlcy9jaGlsbGlt/b21vZ2FsbGVyeS5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet",
       "category": "momo"
     },
@@ -33,7 +30,6 @@
       "price": 15.49,
       "imageSrc": "https://tb-static.uber.com/prod/image-proc/processed_images/9927d4d6e2abe3471f9112acdc6a57e6/4218ca1d09174218364162cd0b1a8cc1.jpeg",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet",
       "category": "chowmein"
     },
@@ -42,7 +38,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/puyQ2-CU-xB2CoFxepNdyk056bqSJqbhYB6CV0nsed8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG40/LnNoYXJlY2hhdC5j/b20vaW1nXzE2MjEz/OV8zMDcyYmY5Y18x/NjY1MTMwMTU5MDc5/X3NjLmpwZz90ZW5h/bnQ9c2MmcmVmZXJy/ZXI9dGFnLXNlcnZp/Y2UmZj0wNzlfc2Mu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -52,7 +47,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/ENptIzGm9rMIebPIIUkETFYxHIlzFJovxkDGo0pz_xM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlc3BydWNlZWF0/cy5jb20vdGhtYi9s/c2lqRVIwb1RwRzAw/S2FxRFFNSU9PYUM5/MzA9LzE1MDB4MC9m/aWx0ZXJzOm5vX3Vw/c2NhbGUoKTptYXhf/Ynl0ZXMoMTUwMDAw/KTpzdHJpcF9pY2Mo/KS9JTUdfODU2Ni1j/YmFjMmMwMDFkNWQ0/YjljOTIzNTg5ZmMx/OGQ5YzEwOC5qcGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -60,7 +54,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/64S_gJB6CMhxT1wiJFlU24J0Ny0lkBCF0MkehydiEBs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jaGFv/c29mZmxhdm9yLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8xMi9maW5hbDIt/NzY4eDEwMjQuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -68,7 +61,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/YCu4VN93m9xYMi0_0eFQwXSgwi7JE0VXvFKcKRdLApU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tb21v/Y3JhdmUuY29tL2lt/YWdlcy9jaGlsbGlt/b21vZ2FsbGVyeS5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -76,7 +68,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/ZgJ96PIDGJSrOK7_37xmlMsmNmvgYHHJg2I_rqO4HjQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvODEz/NDY0NTY4L3Bob3Rv/L2ZyaWVkLW5lcGFs/ZXNlLW1vbW9zLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1r/SFhZX3NjS3FNemlO/MTZRYmkwbHpMX3lO/QUtWWHpHNzBSeUha/d1VYMzNzPQ",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -84,7 +75,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/puyQ2-CU-xB2CoFxepNdyk056bqSJqbhYB6CV0nsed8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG40/LnNoYXJlY2hhdC5j/b20vaW1nXzE2MjEz/OV8zMDcyYmY5Y18x/NjY1MTMwMTU5MDc5/X3NjLmpwZz90ZW5h/bnQ9c2MmcmVmZXJy/ZXI9dGFnLXNlcnZp/Y2UmZj0wNzlfc2Mu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -92,7 +82,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/BxTRcXmwRSVoYLP8a0x57X6R2EWw2YkULF3WorEKnpk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly96dXp1/bW9tby5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDQv/cGFuZnJpZWRtb21v/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -102,7 +91,6 @@
       "price": 3,
       "imageSrc": "https://imgs.search.brave.com/ZvTQwNhdj4LhIT6czRFzPAqgTt_tri_vWavgZGmKLxg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MjQ3OTczNzU5Nzgt/OGMyZjc0NmJkZDNh/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TVRWOGZH/TnZZMkZqYjJ4aGZH/VnVmREI4ZkRCOGZI/d3c",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -110,7 +98,6 @@
       "price": 2,
       "imageSrc": "https://imgs.search.brave.com/afrfH-_YCCz5JiF-9V6R5rp_I1wtoknBoY4AHXwldSg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8w/LzBkL1BFVF9Cb3R0/bGVfV2F0ZXIuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -120,7 +107,6 @@
       "price": 18.49,
       "imageSrc": "https://imgs.search.brave.com/3yWWA5exlJsjQ2C3TrqUI6loZY-YTlI6nPt_thDs1oA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMTc3ODAy/MS83NTMxL2kvNjAw/L2RlcG9zaXRwaG90/b3NfNzUzMTY0NTct/c3RvY2stcGhvdG8t/YmFyLXNuYWNrLWNo/aWNrZW4tNjUtZnJ5/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -128,7 +114,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/QJQ_7j7MOPpL0E8axE7FEeJG2ASRIvg5Oy9eQKICPtI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZXZp/LmItY2RuLm5ldC93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxNy8w/MS92ZWctc3ByaW5n/LXJvbGwtMS5qcGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -136,7 +121,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/3SYCplUt8emAKjGsReH7PLMEfUhtPIT9erAKdi2RAtQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYWtz/a2l0Y2hlbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDcvc3RlcDE3LWNv/YXQuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -146,7 +130,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/xvKc8wTw6bWz_Zw7dPjaF0eaGexBepbKXapL5qDFHpw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c2ltcGx5cmVjaXBl/cy5jb20vdGhtYi9n/ckJtdVdsUU1tUTYz/M24tbTZaMHI0QzJo/a1k9LzE1MDB4MC9m/aWx0ZXJzOm5vX3Vw/c2NhbGUoKTptYXhf/Ynl0ZXMoMTUwMDAw/KTpzdHJpcF9pY2Mo/KS9Ib3QtYW5kLVNv/dXItU291cC1MRUFE/LTMtMDY4MTBhNWVk/Zjg5NGY0MGEwMTEw/ZTA0N2JlODQ2NjMu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -154,7 +137,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/XWwtn94xTztbMRk-u2KNav8VLXbKLQZYzhhyxF5yTQM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9teWZv/b2RzdG9yeS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDcvQ2hpY2tlbi1N/YW5jaG93LVNvdXAt/MS0xMDY3eDYxNy5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -162,7 +144,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/OUXMZlvLo0Yq4eSl1rLbsxuHZzIPAkExNIJTBbwMNTI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9waXBp/bmdwb3RjdXJyeS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDIvU3dlZXQt/Q29ybi1Tb3VwLUlu/ZG8tQ2hpbmVzZS1Q/aXBpbmctUG90LUN1/cnJ5LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -170,7 +151,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/ddom1IbiIfvbaomyauDKvm864Q10pE4Klskpx959gsk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXNh/bWFsYXlzaWEuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzEyL3RvbS15dW0x/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -180,7 +160,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/C5UfC4EE6bDwdh6oxFlBJkvmaWlByU9uCISnkQgb4WU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cmVjaXBldGluZWF0/cy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDIvQXNp/YW4tQ2hpbGxpLUNo/aWNrZW5fN2EuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -188,7 +167,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/ge9ycPofLDUVNrdb2kEHL-AkDpM_F_wPc0xLtf8JjoQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2hpbGl0b2Nob2Mu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA2L0NoaWNr/ZW5NYW5jaHVyaWFu/MS0xLmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -196,7 +174,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/lWPDCxznaS0Nz-5GaLUNzejKBRkVx4lG13DPb57ARJc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aWZm/eWNvb2tzLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/NS9GNTFCREI3Qi03/ODM4LTQ4QkUtOTQ4/NS0zMUJGQUIxMjgx/MkItNzY4eDEwMjQu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -204,7 +181,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/NKoaPtmPuOnyvBgR9de1pkYp7IWB1usxuoksXodzH6Q/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jYXJs/c2JhZGNyYXZpbmdz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wNC9kcmFn/b24tY2hpY2tlbi02/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -212,7 +188,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/zdobYjSdek8_FFy34KI0AQ5jHWoJNQf4mxdzMGOKoOU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9nbGVi/ZWtpdGNoZW4uY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIy/LzAzL2JvbWJheWNo/aWNrZW50b3BwbGF0/ZXBvdGF0b2VzLmpw/Zw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -222,7 +197,6 @@
       "price": 15.49,
       "imageSrc": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -230,7 +204,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/meqmGiRYgXW_S2OnMjX5zAL9IXvxzlLmP4X244n2Kuk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3BpY2VhbmRsaWZl/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8xMC92ZWdn/aWUtbWFuY2h1cmlh/bi5qcGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -238,7 +211,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/7XapjxorRGREUhi887SFY_S_p7AkHweJi3Y094aH1xs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/dGFibGVmb3J0d29i/bG9nLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMi8wMS9n/b2JpLW1hbmNodXJp/YW4tcmVjaXBlLXBo/b3RvLXRhYmxlZm9y/dHdvYmxvZy01LTgw/MXgxMjAwLmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -246,7 +218,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/zf4BlI-fomLcDDJPQest6t6f_kThXWsfBwLgU7K6pSY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29va3JlcHVibGlj/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wOS9jaGls/bGktcGFuZWVyMDIu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -256,7 +227,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/S_Y09fYQWXZ7t9B3LFTMsmPOFacZRi4MCZgkXO97Lk8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aGV3/b2tzb2ZsaWZlLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wNy9jaGlja2Vu/LWNob3ctbWVpbi0x/NS5qcGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -264,7 +234,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/laxB74YdJ0o4fkH-bJPcqg-3_EMnXMG325UONhJEP4A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sYXVy/ZW5zbGF0ZXN0LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wNC9jaG93LW1l/aW4tMTItc2NhbGVk/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -272,7 +241,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/40XfrdXvAkcIzrZSUR2rndcxKT-6d7yfN6RS_uxbOMg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9teWZv/b2RzdG9yeS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDMvb25lLXBhbi12/ZWctbm9vZGxlLWFu/ZC1tYW5jaHVyaWFu/LXN0aXItZnJ5LWlu/ZG8tY2hpbmVzZS1y/ZWNpcGUuMTAyNHgx/MDI0LTIuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -280,7 +248,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/4uWrJbLwqmKQOLInKDZ9RkyOTlZ6a1kPLtqIU9Fe9Fo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGlja3VwbGltZXMu/Y29tL2NhY2hlLzY4/L2Y4LzY4Zjg1NzEx/MmI1NzNlNmY5YWE5/M2I5NmNhYTk0NzQ0/LmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -288,7 +255,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/mAwRsPS4CQJkVu0YxiKZpH_0QINwrb-k37_S--j2Px0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aGFsZmJha2VkaGFy/dmVzdC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMDIv/QmV0dGVyLVRoYW4t/VGFrZW91dC1TemVj/aHVhbi1Ob29kbGVz/LXdpdGgtU2VzYW1l/LUNoaWxpLU9pbC0x/LTEtNzAweDEwNTAu/anBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ],
@@ -298,7 +264,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/z4rKhTuynEgbChjbEYH_k1XS5CVWRGZASDXiRCfbJUk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aGVy/ZWNpcGVjcml0aWMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE5LzA3L2Vhc3lf/ZnJpZWRfcmljZS5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -306,7 +271,6 @@
       "price": 16.49,
       "imageSrc": "https://imgs.search.brave.com/AdkvpLPB_Coe5vHHRLTU99X7D4ysPAQIiNI1-Rmyook/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbmRp/YW5hbWJyb3NpYS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMTAvc2NoZXp3/YW4tY2hpY2tlbi1m/cmllZC1yaWNlXzM4/NjcuanBn",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -314,7 +278,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/JFqa2ME_N0koFGFhJV3qmoI9YQ6-lQLSpel49BVpFJQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bXlwbGFudGlmdWxj/b29raW5nLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMi8w/MS9tYW5jaHVyaWFu/LWZyaWVkLXJpY2Ut/Y2hvcHN0aWNrcy5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -322,7 +285,6 @@
       "price": 15.49,
       "imageSrc": "https://imgs.search.brave.com/DQ13AOQ5VIt1q_LyqeEHTafw9Y7GDZNTdBxlCoJRY6M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jaHJp/c3RpZWF0aG9tZS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMDQvQ2hpbmVz/ZS1DaGlja2VuLUZy/aWVkLVJpY2UtNS5q/cGc",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     },
     {
@@ -330,7 +292,6 @@
       "price": 17.49,
       "imageSrc": "https://imgs.search.brave.com/7zp7L5dfMplJsYXARE8hoa48dL75Qa9llXGmRDrwgjk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2ltbWVzb21lb3Zl/bi5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTcvMDcvSG93/LVRvLU1ha2UtRnJp/ZWQtUmljZS1SZWNp/cGUtMy0xLmpwZw",
       "imageAlt": "",
-      "hasPreparationOptions": false,
       "description": "Lorem Ipsum Dolor sit amet"
     }
   ]

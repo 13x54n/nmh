@@ -7,16 +7,17 @@ import RecoveryUser from "../pages/RecoveryUser";
 import Checkout from "../pages/Checkout";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Activities from "../pages/Activities";
+import { useContext } from "react";
+import { FilterContext } from "../contexts/Filter";
+import FilteredProducts from "../pages/FilteredProducts";
 
 export default function Router() {
+  const { filterInput } = useContext(FilterContext);
+  console.log(filterInput);
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <Layout>
-          <Home />
-        </Layout>
-      ),
+      element: <Layout>{filterInput ? <FilteredProducts /> : <Home />}</Layout>,
     },
     {
       path: "/auth/login",

@@ -49,7 +49,8 @@ const reducer = (state, action) => {
 
       const updatedCart = [...state.cart];
       updatedCart[itemIndex].quantity += 1;
-      updatedCart[itemIndex].price = updatedCart[itemIndex].quantity * updatedCart[itemIndex].product.price
+      updatedCart[itemIndex].price =
+        updatedCart[itemIndex].quantity * updatedCart[itemIndex].product.price;
 
       const updatedSubtotal = calculateSubtotal(updatedCart);
       localStorage.setItem("nepalimomohouse_cart", JSON.stringify(updatedCart));
@@ -64,6 +65,31 @@ const reducer = (state, action) => {
       };
 
     case "DECREASE_ITEM_QUANTITY":
+      const _itemIndex = state.cart.indexOf(action.payload);
+      const _updatedCart = [...state.cart];
+
+      if (_updatedCart[_itemIndex].quantity > 1) {
+        _updatedCart[_itemIndex].quantity -= 1;
+        _updatedCart[_itemIndex].price =
+          _updatedCart[_itemIndex].quantity *
+          _updatedCart[_itemIndex].product.price;
+
+        const updatedSubtotal = calculateSubtotal(_updatedCart);
+        localStorage.setItem(
+          "nepalimomohouse_cart",
+          JSON.stringify(_updatedCart)
+        );
+        localStorage.setItem(
+          "nepalimomohouse_subtotal",
+          JSON.stringify(updatedSubtotal)
+        );
+        return {
+          ...state,
+          cart: _updatedCart,
+          subtotal: updatedSubtotal,
+        };
+      }
+      return state;
 
     default:
       return state;
