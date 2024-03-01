@@ -1,9 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../contexts/Cart";
+import io from "socket.io-client";
 
 export default function Checkout() {
   const { cartState, dispatchCartState } = useContext(CartContext);
-  console.log(cartState);
+
+  // socket variables
+  const [socket, setSocket] = useState(null);
+  const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
+
+  useEffect(() => {
+    const socket = io('http://localhost:3000');
+    setSocket(socket);
+
+    socket.on('connect', () => {
+      console.log('Connected to WebSocket server');
+    });
+
+    socket.on('response', (data) => {
+      console.log('Received response:', data);
+      setResponse(data);
+    });
+
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
+  const sendMessage = () => {
+    if (socket && message) {
+      socket.emit('message', message);
+    }
+  };
   return (
     <div>
       <div className="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
@@ -85,7 +114,6 @@ export default function Checkout() {
                 </div>
               </div>
             ))}
-            
           </div>
 
           <p className="mt-8 text-lg font-medium">Delivery Methods</p>
@@ -315,6 +343,12 @@ export default function Checkout() {
           </button>
         </div>
       </div>
+
+      <div>
+      <input value={message} onChange={(e) => setMessage(e.target.value)} />
+      <button onClick={sendMessage}>Send Message</button>
+      <p>Response: {response}</p>
+    </div>
     </div>
   );
 }
